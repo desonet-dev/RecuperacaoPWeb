@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title-light {
+  font-size: 50px;
+  font-weight: 300;
+  color: #bdbdbd;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.title-bold {
+  font-size: 50px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 30px;
+  line-height: 1.1;
+}
+
+button,
+.btn-view,
+.btn-send,
+.btn-all-projects,
+.btn-contact-us,
+.btn-read-more,
+.btn-view-project,
+.btn-back {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  text-transform: uppercase;
+}
+
+button:hover,
+.btn-view:hover,
+.btn-send:hover {
+  opacity: 0.85;
+}
+
+.nav-arrow {
+  background-color: #f2f2f2;
+  color: #333333;
+  border: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.nav-arrow:hover {
+  background-color: #e0e0e0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  max-width: 1170px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-menu a {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #333333;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-menu a.active {
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  font-weight: 700;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-bottom: 60px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-controls {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0 20px 0;
+}
+
+.page-counter {
+  font-size: 18px;
+  color: #bdbdbd;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  flex: 1.5;
+}
+
+.hero-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.btn-view-project {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 18px 32px;
+}
+
+.about-section {
+  background-color: #fbfbfb;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex: 1;
+}
+
+.about-images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.img-sub-3 {
+  grid-column: span 2;
+  height: 140px !important;
+}
+
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.about-content h2 {
+  font-size: 50px;
+  font-weight: 300;
+  color: #bdbdbd;
+}
+
+.btn-read-more {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.mission-section h2 {
+  font-size: 50px;
+  font-weight: 300;
+  color: #bdbdbd;
+  margin-bottom: 30px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.mission-item {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.mission-item .number {
+  font-size: 160px;
+  font-weight: 900;
+  color: #f2f2f2;
+  line-height: 0.8;
+}
+
+.mission-item p {
+  color: #333333;
+  margin-top: 20px;
+}
+
+.our-projects-preview h2 {
+  font-size: 50px;
+  font-weight: 300;
+  color: #bdbdbd;
+  margin-bottom: 30px;
+}
+
+.projects-grid-home {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  position: relative;
+  height: 255px;
+  background-color: #eeeeee;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item.main-item {
+  grid-column: span 2;
+}
+
+.grid-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.grid-item .overlay h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.grid-item .overlay a {
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.all-projects-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.home-contact h2 {
+  font-size: 50px;
+  font-weight: 300;
+  color: #bdbdbd;
+  margin-bottom: 30px;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: #f3f3f3;
+  border: none;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-image {
+  flex: 1.2;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects-container,
+.project-details-container {
+  padding: 40px 0;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project-card {
+  display: flex;
+  background-color: #fbfbfb;
+  height: 300px;
+}
+
+.project-card img {
+  width: 60%;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-info h3 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #bdbdbd;
+}
+
+.project-content {
+  margin: 40px 0;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 400px;
+  background-color: #eeeeee;
+  margin-top: 20px;
+}
+
+.placeholder-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-container {
+  padding: 40px 0;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.photo-item {
+  height: 180px;
+  background-color: #eeeeee;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #bdbdbd;
+}
+
+.contact-page-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.contact-info-side {
+  flex: 1;
+}
+
+.company-info {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.company-info h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.map-side {
+  flex: 1.5;
+}
+
+.map-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  padding: 60px 0 20px 0;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  font-weight: bold;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #c8c8c8;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-menu {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero,
+  .about-section,
+  .contact-wrapper,
+  .contact-page-container {
+    flex-direction: column;
+  }
+
+  .mission-grid,
+  .projects-grid-home,
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-item.main-item {
+    grid-column: span 2;
+  }
+
+  .project-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
